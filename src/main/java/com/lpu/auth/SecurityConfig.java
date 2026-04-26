@@ -27,6 +27,7 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 // endpoints publicos
                 .requestMatchers(HttpMethod.POST, "/auth/google").permitAll()
+                .requestMatchers(HttpMethod.POST, "/players").permitAll()
                 .requestMatchers(HttpMethod.GET, "/players/**").permitAll()
                 .requestMatchers(HttpMethod.GET, "/ranking/**").permitAll()
                 .requestMatchers(HttpMethod.GET, "/tournaments/**").permitAll()
